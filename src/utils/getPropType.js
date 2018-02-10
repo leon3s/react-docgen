@@ -129,6 +129,7 @@ function getPropTypeShape(argumentPath) {
       if (docs) {
         descriptor.description = docs;
       }
+      descriptor.type = descriptor.name;
       descriptor.required = isRequiredPropType(propertyPath.get('value'));
       value[getPropertyName(propertyPath)] = descriptor;
     });
